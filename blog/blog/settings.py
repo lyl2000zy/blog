@@ -75,9 +75,13 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'django.db.backends.mysql',  # 默认
+        'HOST': 'localhost',  # mysql的ip地址
+        'PORT': 3306,  # mysql的端口
+        'USER': 'itheima',  # mysql的用户名
+        'PASSWORD': '123456',  # mysql的密码
+        'NAME': 'itheima_blog',  # 连接的数据库
+    },
 }
 
 
